@@ -6,13 +6,13 @@ Summary(pl):	Skrypt do tworzenia i poprawiania urz±dzeñ z /dev
 Summary(pt_BR):	Script para fazer e atualizar entradas referentes a dispositivos em /dev
 Summary(tr):	Aygýt tanýmý yapmak ve deðiþtirmek için bir araç
 Name:		MAKEDEV
-Version:	2.6
-Release:	7
+Version:	3.13
+Release:	1
 License:	FRS - Freely Redistributable Software
 Group:		Applications/System
-Source0:	%{name}-%{version}.tar.gz
+Source0:	%{name}-%{version}-1.tar.gz
 # Source0-md5:	f809a62a47ac46ad2b13354aa57c3ed0
-BuildArch:	noarch
+BuildRequires:	libselinux-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_bindir		/sbin
@@ -62,14 +62,20 @@ olarak iþleyebilmesi için temel gereksinimlerdendir.
 %prep
 %setup -q
 
+%build
+%{__make} \
+	CC="%{__cc}" \
+	OPTFLAGS="$RPM_OPT_FLAGS" \
+	SELINUX=1
+
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man8}
 
 %{__make} install \
-	ROOT=$RPM_BUILD_ROOT \
-	MANDIR=$RPM_BUILD_ROOT%{_mandir} \
-	BINDIR=$RPM_BUILD_ROOT%{_bindir}
+	DESTDIR=$RPM_BUILD_ROOT \
+	devdir=/dev \
+	makedevdir=/sbin
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -77,4 +83,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/MAKEDEV
+%attr(755,root,root) %{_sbindir}/*
 %{_mandir}/man8/*
+%config %{_sysconfdir}/makedev.d
