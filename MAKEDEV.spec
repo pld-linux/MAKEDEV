@@ -15,7 +15,7 @@ Source0:	%{name}-%{version}.tar.gz
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_bindir		%{_sbindir}
+%define		_bindir		/sbin
 
 %description
 The /dev tree holds special files, each of which corresponds to a type
