@@ -5,7 +5,7 @@ Summary(pl): 	Skrypt do tworzenia i poprawiania urz±dzeñ z /dev
 Summary(de): 	Script zum Erstellen und Aktualisieren von /dev-Einträgen
 Name:        	MAKEDEV
 Version:     	2.5
-Release:     	2
+Release:     	3
 Copyright:   	none
 Group:       	Utilities/System
 Group(pl):   	Narzêdzia/System
@@ -52,11 +52,13 @@ gereksinimlerdendir.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/{dev,usr/man/man8}
+install -d $RPM_BUILD_ROOT/{dev,usr/share/man/man8}
 
-make ROOT=$RPM_BUILD_ROOT install
+make install \
+	ROOT=$RPM_BUILD_ROOT \
+	MANDIR=$RPM_BUILD_ROOT/usr/share/man
 
-gzip -9nf $RPM_BUILD_ROOT/usr/man/man8/*
+gzip -9nf $RPM_BUILD_ROOT/usr/share/man/man8/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -64,9 +66,13 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(744,root,root) /dev/MAKEDEV
-/usr/man/man8/*
+/usr/share/man/man8/*
 
 %changelog
+* Sun May  9 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
+  [2.5-2]
+- now package is FHS 2.0 compiliat.
+
 * Tue Feb  9 1999 Micha³ Kuratczyk <kurkens@polbox.com>
   [2.3.1-9]
 - added gzipping man page
