@@ -6,7 +6,7 @@ Summary(tr):	Aygýt tanýmý yapmak ve deðiþtirmek için bir araç
 Name:		MAKEDEV
 Version:	2.6
 Release:	1
-Copyright:	FRS - Freely Redistributable Software
+License:	FRS - Freely Redistributable Software
 Group:		Applications/System
 Group(de):	Applikationen/System
 Group(pl):	Aplikacje/System
