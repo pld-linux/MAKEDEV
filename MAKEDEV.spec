@@ -9,6 +9,7 @@ Release:	2
 License:	FRS - Freely Redistributable Software
 Group:		Applications/System
 Source0:	%{name}-%{version}.tar.gz
+Conflicts:	devfs
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
