@@ -1,0 +1,36 @@
+--- MAKEDEV-3.13/makedev.d/linux-2.6.x~	2004-12-21 12:20:32.000000000 +0100
++++ MAKEDEV-3.13/makedev.d/linux-2.6.x	2004-12-21 12:20:32.000000000 +0100
+@@ -1379,6 +1379,33 @@
+ #c $ROOT                180  32  1  16 usb/ez%d
+ #c $CONSOLE             180  48  1  16 usb/scanner%d
+ 
++b $STORAGE             180    0  1  8 uba
++b $STORAGE             180    8  1  8 ubb
++b $STORAGE             180   16  1  8 ubc
++b $STORAGE             180   24  1  8 ubd
++b $STORAGE             180   32  1  8 ube
++b $STORAGE             180   40  1  8 ubf
++b $STORAGE             180   48  1  8 ubg
++b $STORAGE             180   56  1  8 ubh
++b $STORAGE             180   64  1  8 ubi
++b $STORAGE             180   72  1  8 ubj
++b $STORAGE             180   80  1  8 ubk
++b $STORAGE             180   88  1  8 ubl
++b $STORAGE             180   96  1  8 ubm
++b $STORAGE             180  104  1  8 ubn
++b $STORAGE             180  112  1  8 ubo
++b $STORAGE             180  120  1  8 ubp
++b $STORAGE             180  128  1  8 ubq
++b $STORAGE             180  136  1  8 ubr
++b $STORAGE             180  144  1  8 ubs
++b $STORAGE             180  152  1  8 ubt
++b $STORAGE             180  160  1  8 ubu
++b $STORAGE             180  168  1  8 ubv
++b $STORAGE             180  176  1  8 ubw
++b $STORAGE             180  184  1  8 ubx
++b $STORAGE             180  192  1  8 uby
++b $STORAGE             180  200  1  8 ubz
++
+ c $ALLREAD             181   0  1  16 pcfclock%d
+ c $ROOT                182   0  1  16 pethr%d
+ 
