@@ -7,7 +7,7 @@ Summary(pt_BR):	Script para fazer e atualizar entradas referentes a dispositivos
 Summary(tr):	Aygýt tanýmý yapmak ve deðiþtirmek için bir araç
 Name:		MAKEDEV
 Version:	2.6
-Release:	6
+Release:	6.1
 License:	FRS - Freely Redistributable Software
 Group:		Applications/System
 Source0:	%{name}-%{version}.tar.gz
@@ -15,7 +15,7 @@ Source0:	%{name}-%{version}.tar.gz
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_bindir		/dev
+%define		_bindir		%{_sbindir}
 
 %description
 The /dev tree holds special files, each of which corresponds to a type
