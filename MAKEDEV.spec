@@ -5,15 +5,16 @@ Summary(pl): Skrypt do tworzenia i poprawiania urz±dzeñ z /dev
 Summary(de): Script zum Erstellen und Aktualisieren von /dev-Einträgen
 Name:        MAKEDEV
 Version:     2.3.1
-Release:     8
+Release:     9
 Copyright:   none
 Group:       Utilities/System
+Group(pl):   Narzêdzia/System
 Source:      ftp://tsx-11.mit.edu/pub/linux/sources/sbin/%{name}-%{version}.tar.gz
 Requires:    /bin/sh fileutils shadow-utils >= 970616-7
 Prereq:      shadow-utils
 # Note: pre-requires that particular version of shadow-utils, but
 # RPM can't handle that right now.
-BuildArchitectures: noarch
+BuildArch:   noarch
 BuildRoot:   /tmp/%{name}-%{version}-root
 
 %description
@@ -57,14 +58,22 @@ install -d $RPM_BUILD_ROOT/{dev,usr/man/man8}
 
 make ROOT=$RPM_BUILD_ROOT install
 
+gzip -9nf $RPM_BUILD_ROOT/usr/man/man8/*
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %attr(744, root, root) /dev/MAKEDEV
-%attr(644, root,  man) /usr/man/man8/MAKEDEV.8
+%attr(644, root,  man) /usr/man/man8/*
 
 %changelog
+* Tue Feb  9 1999 Micha³ Kuratczyk <kurkens@polbox.com>
+  [2.3.1-9]
+- added gzipping man page
+- added Group(pl)
+- cosmetic changes
+
 * Mon Sep  7 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
   [2.3.1-8]
 - removed %post wit adding floppy grouup (it is by default in setup),
