@@ -36,7 +36,7 @@ fichiers qui remplissent l'arborescence /dev.
 
 %description -l pl
 Pliki specjalne znajduj±ce siê w katalogu /dev odpowiadaj±
-urz±dzeniom, które s± obs³ugiwane przez Linuxa. Pakiet ten zawiera
+urz±dzeniom, które s± obs³ugiwane przez Linuksa. Pakiet ten zawiera
 skrypt, który uczyni tworzenie i operowanie tymi plikami ³atwiejszym.
 
 %description -l tr
@@ -49,8 +49,6 @@ olarak iþleyebilmesi için temel gereksinimlerdendir.
 %prep
 %setup -q
 
-%build
-
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man8}
@@ -59,8 +57,6 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man8}
 	ROOT=$RPM_BUILD_ROOT \
 	MANDIR=$RPM_BUILD_ROOT%{_mandir} \
 	BINDIR=$RPM_BUILD_ROOT%{_bindir}
-
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man8/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
