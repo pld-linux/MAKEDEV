@@ -54,7 +54,7 @@ olarak iþleyebilmesi için temel gereksinimlerdendir.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man8}
 
-make install \
+%{__make} install \
 	ROOT=$RPM_BUILD_ROOT \
 	MANDIR=$RPM_BUILD_ROOT%{_mandir} \
 	BINDIR=$RPM_BUILD_ROOT%{_bindir}
