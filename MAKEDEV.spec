@@ -107,7 +107,7 @@ rm -rf $RPM_BUILD_ROOT
 - redirect groupadd call so that we're more quiet
 
 * Fri Oct 24 1997 Michael K. Johnson <johnsonm@redhat.com>
-- 2.3.1: use /usr/sbin/groupadd from new shadow utils
+- 2.3.1: use %{_sbindir}/groupadd from new shadow utils
 
 * Mon Sep 29 1997 Michael K. Johnson <johnsonm@redhat.com>
 - Updated to 2.3, as Nick agreed to me making an interim release while
