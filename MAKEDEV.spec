@@ -1,7 +1,7 @@
 Summary:	Script to make and update /dev entries
 Summary(de):	Script zum Erstellen und Aktualisieren von /dev-Einträgen
 Summary(fr):	Script pour créer et mettre à jour les entrées /dev
-Summary(pl):	Skrypt do tworzenia i poprawiania urz±dzeñ z /dev 
+Summary(pl):	Skrypt do tworzenia i poprawiania urz±dzeñ z /dev
 Summary(tr):	Aygýt tanýmý yapmak ve deðiþtirmek için bir araç
 Name:		MAKEDEV
 Version:	2.6
