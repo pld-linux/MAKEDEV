@@ -13,6 +13,8 @@ Source:      	%{name}-%{version}.tar.gz
 BuildArch:	noarch
 BuildRoot:	/tmp/%{name}-%{version}-root
 
+%define		_bindir		/dev
+
 %description
 The /dev tree holds special files, each of which corresponds to a type
 of hardware device that Linux supports. This package contains a script
@@ -50,12 +52,12 @@ gereksinimlerdendir.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/{dev,usr/share/man/man8}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man8}
 
 make install \
 	ROOT=$RPM_BUILD_ROOT \
 	MANDIR=$RPM_BUILD_ROOT%{_mandir} \
-	BINDIR=$RPM_BUILD_ROOT/dev
+	BINDIR=$RPM_BUILD_ROOT%{_bindir}
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man8/*
 
@@ -64,7 +66,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-/dev/MAKEDEV
+%attr(755,root,root) %{_bindir}/MAKEDEV
 %{_mandir}/man8/*
 
 %changelog
