@@ -56,9 +56,9 @@ install -d $RPM_BUILD_ROOT/{dev,usr/share/man/man8}
 
 make install \
 	ROOT=$RPM_BUILD_ROOT \
-	MANDIR=$RPM_BUILD_ROOT/usr/share/man
+	MANDIR=$RPM_BUILD_ROOT%{_mandir}
 
-gzip -9nf $RPM_BUILD_ROOT/usr/share/man/man8/*
+gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man8/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -66,7 +66,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(744,root,root) /dev/MAKEDEV
-/usr/share/man/man8/*
+%{_mandir}/man8/*
 
 %changelog
 * Sun May  9 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
