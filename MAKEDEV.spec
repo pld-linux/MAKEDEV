@@ -1,7 +1,9 @@
 Summary:	Script to make and update /dev entries
 Summary(de):	Script zum Erstellen und Aktualisieren von /dev-Einträgen
+Summary(es):	Script para hacer y actualizar entradas referentes a dispositivos en /dev
 Summary(fr):	Script pour créer et mettre à jour les entrées /dev
 Summary(pl):	Skrypt do tworzenia i poprawiania urz±dzeñ z /dev
+Summary(pt_BR):	Script para fazer e atualizar entradas referentes a dispositivos em /dev
 Summary(tr):	Aygýt tanýmý yapmak ve deðiþtirmek için bir araç
 Name:		MAKEDEV
 Version:	2.6
@@ -27,6 +29,12 @@ Hardwaregerättyp entspricht, der von Linux unterstützt wird. Dieses
 Paket enthält ein Skript, das die Erstellung und die Pflege der
 Dateien innerhalb dieser Hierarchie vereinfacht.
 
+%description -l es
+El directorio /dev posee archivos especiales, cada uno de ellos
+correspondiendo a un tipo de dispositivo de hardware que Linux
+soporta. Este paquete contiene un script que hace más fácil la
+creación y manutención de los archivos en el directorio /dev.
+
 %description -l fr
 L'arborescence /dev contient des fichiers spéciaux. Chacun d'eux
 correspond à un périphérique matériel gérable par Linux. Ce paquetage
@@ -37,6 +45,12 @@ fichiers qui remplissent l'arborescence /dev.
 Pliki specjalne znajduj±ce siê w katalogu /dev odpowiadaj±
 urz±dzeniom, które s± obs³ugiwane przez Linuksa. Pakiet ten zawiera
 skrypt, który uczyni tworzenie i operowanie tymi plikami ³atwiejszym.
+
+%description -l pt_BR
+O diretório /dev possui arquivos especiais, cada um deles
+correspondendo a um tipo de dispositivo de hardware que o Linux
+suporta. Este pacote contém um script que torna mais fácil a criação
+e manutenção dos arquivos no diretório /dev.
 
 %description -l tr
 Unix ve Unix benzeri sistemler (Linux da dahil olmak üzere), makinaya
