@@ -7,8 +7,9 @@ Name:		MAKEDEV
 Version:	2.6
 Release:	1
 Copyright:	FRS - Freely Redistributable Software
-Group:		Utilities/System
-Group(pl):	Narzêdzia/System
+Group:		Applications/System
+Group(de):	Applikationen/System
+Group(pl):	Aplikacje/System
 Source0:	%{name}-%{version}.tar.gz
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
