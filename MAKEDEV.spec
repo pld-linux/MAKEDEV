@@ -11,7 +11,7 @@ Release:	1
 License:	FRS - Freely Redistributable Software
 Group:		Applications/System
 Source0:	%{name}-%{version}-1.tar.gz
-# Source0-md5:	f809a62a47ac46ad2b13354aa57c3ed0
+# Source0-md5:	f8befaebd0813c6fa59c07ef3875f232
 BuildRequires:	libselinux-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
