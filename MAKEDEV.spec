@@ -1,17 +1,18 @@
-Summary:	Script to make and update /dev entries
+Summary:	Program to make and update /dev entries
 Summary(de):	Script zum Erstellen und Aktualisieren von /dev-Einträgen
 Summary(es):	Script para hacer y actualizar entradas referentes a dispositivos en /dev
 Summary(fr):	Script pour créer et mettre à jour les entrées /dev
-Summary(pl):	Skrypt do tworzenia i poprawiania urz±dzeñ z /dev
+Summary(pl):	Program do tworzenia i poprawiania urz±dzeñ z /dev
 Summary(pt_BR):	Script para fazer e atualizar entradas referentes a dispositivos em /dev
 Summary(tr):	Aygýt tanýmý yapmak ve deðiþtirmek için bir araç
 Name:		MAKEDEV
 Version:	3.13
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Applications/System
 Source0:	%{name}-%{version}-1.tar.gz
 # Source0-md5:	f8befaebd0813c6fa59c07ef3875f232
+Patch0:		%{name}-ub.patch
 BuildRequires:	libselinux-devel >= 0:1.8
 Requires:	libselinux >= 0:1.8
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -20,9 +21,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 The /dev tree holds special files, each of which corresponds to a type
-of hardware device that Linux supports. This package contains a script
-which makes it easier to create and maintain the files which fill the
-/dev tree.
+of hardware device that Linux supports. This package contains a
+program which makes it easier to create and maintain the files which
+fill the /dev tree.
 
 %description -l de
 Die /dev-Hierarchie enthält spezielle Dateien, von denen jede einem
@@ -45,7 +46,7 @@ fichiers qui remplissent l'arborescence /dev.
 %description -l pl
 Pliki specjalne znajduj±ce siê w katalogu /dev odpowiadaj±
 urz±dzeniom, które s± obs³ugiwane przez Linuksa. Pakiet ten zawiera
-skrypt, który uczyni tworzenie i operowanie tymi plikami ³atwiejszym.
+program, który uczyni tworzenie i operowanie tymi plikami ³atwiejszym.
 
 %description -l pt_BR
 O diretório /dev possui arquivos especiais, cada um deles
@@ -62,6 +63,7 @@ olarak iþleyebilmesi için temel gereksinimlerdendir.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__make} \
