@@ -7,7 +7,7 @@ Summary(pt_BR):	Script para fazer e atualizar entradas referentes a dispositivos
 Summary(tr):	Aygýt tanýmý yapmak ve deðiþtirmek için bir araç
 Name:		MAKEDEV
 Version:	2.6
-Release:	4
+Release:	5
 License:	FRS - Freely Redistributable Software
 Group:		Applications/System
 Source0:	%{name}-%{version}.tar.gz
