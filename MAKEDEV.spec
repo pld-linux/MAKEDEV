@@ -64,8 +64,9 @@ gzip -9nf $RPM_BUILD_ROOT/usr/man/man8/*
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%attr(744, root, root) /dev/MAKEDEV
-%attr(644, root,  man) /usr/man/man8/*
+%deffatr(644,root,root,755)
+%attr(744,root,root) /dev/MAKEDEV
+/usr/man/man8/*
 
 %changelog
 * Tue Feb  9 1999 Micha³ Kuratczyk <kurkens@polbox.com>
