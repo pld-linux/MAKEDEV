@@ -1,17 +1,19 @@
-Summary:     Script to make and update /dev entries
-Summary(fr): Script pour créer et mettre à jour les entrées /dev
-Summary(tr): Aygýt tanýmý yapmak ve deðiþtirmek için bir araç
-Summary(pl): Skrypt do tworzenia i poprawiania urz±dzeñ z /dev 
-Summary(de): Script zum Erstellen und Aktualisieren von /dev-Einträgen
-Name:        MAKEDEV
-Version:     2.3.1
-Release:     9
-Copyright:   none
-Group:       Utilities/System
-Group(pl):   Narzêdzia/System
-Source:      ftp://tsx-11.mit.edu/pub/linux/sources/sbin/%{name}-%{version}.tar.gz
-Requires:    /bin/sh fileutils shadow-utils >= 970616-7
-Prereq:      shadow-utils
+Summary:     	Script to make and update /dev entries
+Summary(fr): 	Script pour créer et mettre à jour les entrées /dev
+Summary(tr): 	Aygýt tanýmý yapmak ve deðiþtirmek için bir araç
+Summary(pl): 	Skrypt do tworzenia i poprawiania urz±dzeñ z /dev 
+Summary(de): 	Script zum Erstellen und Aktualisieren von /dev-Einträgen
+Name:        	MAKEDEV
+Version:     	2.5
+Release:     	2
+Copyright:   	none
+Group:       	Utilities/System
+Group(pl):   	Narzêdzia/System
+Source:      	ftp://tsx-11.mit.edu/pub/linux/sources/sbin/%{name}-%{version}.tar.gz
+Requires:    	fileutils 
+Requires:	setup
+#Requires:	shadow-utils >= 970616-7
+#Prereq:      	shadow-utils
 # Note: pre-requires that particular version of shadow-utils, but
 # RPM can't handle that right now.
 BuildArch:   noarch
@@ -64,7 +66,7 @@ gzip -9nf $RPM_BUILD_ROOT/usr/man/man8/*
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%deffatr(644,root,root,755)
+%defattr(644,root,root,755)
 %attr(744,root,root) /dev/MAKEDEV
 /usr/man/man8/*
 
