@@ -23,7 +23,7 @@ which makes it easier to create and maintain the files which fill the
 /dev tree.
 
 %description -l de
-Die 7dev-Hierarchie enthält spezielle Dateien, von denen jede einem 
+Die /dev-Hierarchie enthält spezielle Dateien, von denen jede einem 
 Hardwaregerättyp entspricht, der von Linux unterstützt wird. Dieses 
 Paket enthält ein Skript, das die Erstellung und die Pflege der Dateien
 innerhalb dieser Hierarchie vereinfacht. 
@@ -35,7 +35,7 @@ contient un script facilitant la création et la maintenance des
 fichiers qui remplissent l'arborescence /dev.
 
 %description -l pl
-Pliki specjalne znajduj±ce siê w katalogu /dev odpowiadaj± urz±dzeniom
+Pliki specjalne znajduj±ce siê w katalogu /dev odpowiadaj± urz±dzeniom,
 które s± obs³ugiwane przez Linuxa. Pakiet ten zawiera skrypt, który
 uczyni tworzenie i operowanie tymi plikami ³atwiejszym.
 
