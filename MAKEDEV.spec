@@ -5,7 +5,7 @@ Summary(pl):	Skrypt do tworzenia i poprawiania urz±dzeñ z /dev
 Summary(tr):	Aygýt tanýmý yapmak ve deðiþtirmek için bir araç
 Name:		MAKEDEV
 Version:	2.6
-Release:	2
+Release:	3
 License:	FRS - Freely Redistributable Software
 Group:		Applications/System
 Source0:	%{name}-%{version}.tar.gz
