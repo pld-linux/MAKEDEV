@@ -68,26 +68,3 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/MAKEDEV
 %{_mandir}/man8/*
-
-%changelog
-* Thu Jun 10 1999 Wojtek ¦lusarczyk <wojtek@shadow.eu.org>
-
-- prepared v. 2.6 for PLD Linux
-  (based most on debian MAKEDEV)
-- perm of /dev/MAKEDEV changed to standard 644 root.root
-
-* Sun May  9 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [2.5-2]
-- now package is FHS 2.0 compliant.
-
-* Tue Feb  9 1999 Micha³ Kuratczyk <kurkens@polbox.com>
-  [2.3.1-9]
-- added gzipping man page
-- added Group(pl)
-- cosmetic changes
-
-* Mon Sep  7 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [2.3.1-8]
-- removed %post wit adding floppy grouup (it is by default in setup),
-- changed permission to 744 on /dev/MAKEDEV,
-- added using %%{name} and %%{version} macros in Buildroot and Source.
