@@ -12,7 +12,8 @@ License:	GPL v2+
 Group:		Applications/System
 Source0:	%{name}-%{version}-1.tar.gz
 # Source0-md5:	f8befaebd0813c6fa59c07ef3875f232
-BuildRequires:	libselinux-devel
+BuildRequires:	libselinux-devel >= 0:1.8
+Requires:	libselinux >= 0:1.8
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_bindir		/sbin
