@@ -4,14 +4,12 @@ Summary(tr): 	Aygýt tanýmý yapmak ve deðiþtirmek için bir araç
 Summary(pl): 	Skrypt do tworzenia i poprawiania urz±dzeñ z /dev 
 Summary(de): 	Script zum Erstellen und Aktualisieren von /dev-Einträgen
 Name:        	MAKEDEV
-Version:     	2.5
-Release:     	3
+Version:     	2.6
+Release:     	1
 Copyright:   	none
 Group:       	Utilities/System
 Group(pl):   	Narzêdzia/System
-Source:      	ftp://tsx-11.mit.edu/pub/linux/sources/sbin/%{name}-%{version}.tar.gz
-Requires:    	fileutils 
-Requires:	setup
+Source:      	%{name}-%{version}.tar.gz
 BuildArch:	noarch
 BuildRoot:	/tmp/%{name}-%{version}-root
 
@@ -56,7 +54,8 @@ install -d $RPM_BUILD_ROOT/{dev,usr/share/man/man8}
 
 make install \
 	ROOT=$RPM_BUILD_ROOT \
-	MANDIR=$RPM_BUILD_ROOT%{_mandir}
+	MANDIR=$RPM_BUILD_ROOT%{_mandir} \
+	BINDIR=$RPM_BUILD_ROOT/dev
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man8/*
 
@@ -65,10 +64,16 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(744,root,root) /dev/MAKEDEV
+/dev/MAKEDEV
 %{_mandir}/man8/*
 
 %changelog
+* Thu Jun 10 1999 Wojtek ¦lusarczyk <wojtek@shadow.eu.org>
+
+- prepared v. 2.6 for PLD Linux
+  (based most on debian MAKEDEV)
+- perm of /dev/MAKEDEV changed to standard 644 root.root
+
 * Sun May  9 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
   [2.5-2]
 - now package is FHS 2.0 compliant.
@@ -84,37 +89,3 @@ rm -rf $RPM_BUILD_ROOT
 - removed %post wit adding floppy grouup (it is by default in setup),
 - changed permission to 744 on /dev/MAKEDEV,
 - added using %%{name} and %%{version} macros in Buildroot and Source.
-
-* Thu Aug 13 1998 Jeff Johnson <jbj@redhat.com>
-- build root
-
-* Mon Jun 29 1998 Wojtek ¦lusarczyk <wojtek@shadow.eu.org>
-- added pl translation.
-
-* Fri Apr 24 1998 Prospector System <bugs@redhat.com>
-- translations modified for de
-
-* Thu Apr 23 1998 Prospector System <bugs@redhat.com>
-- translations modified for fr, tr
-
-* Thu Apr 23 1998 Erik Troan <ewt@redhat.com>
-- fixed group add script (had -r instead of -o)
-
-* Fri Apr 17 1998 Erik Troan <ewt@redhat.com>
-- put -o option on groupadd after -g -- I hope Christian can tell me why
-
-* Thu Apr 09 1998 Cristian Gafton <gafton@redhat.com>
-- redirect groupadd call so that we're more quiet
-
-* Fri Oct 24 1997 Michael K. Johnson <johnsonm@redhat.com>
-- 2.3.1: use %{_sbindir}/groupadd from new shadow utils
-
-* Mon Sep 29 1997 Michael K. Johnson <johnsonm@redhat.com>
-- Updated to 2.3, as Nick agreed to me making an interim release while
-  he figures out whether he wants to be the maintainer.
-
-* Wed Sep 03 1997 Erik Troan <ewt@redhat.com>
-- made a noarch package
-
-* Tue Jul 08 1997 Erik Troan <ewt@redhat.com>
-- added dependencies
