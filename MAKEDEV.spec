@@ -1,8 +1,8 @@
 Summary:     	Script to make and update /dev entries
-Summary(fr): 	Script pour créer et mettre à jour les entrées /dev
-Summary(tr): 	Aygýt tanýmý yapmak ve deðiþtirmek için bir araç
-Summary(pl): 	Skrypt do tworzenia i poprawiania urz±dzeñ z /dev 
 Summary(de): 	Script zum Erstellen und Aktualisieren von /dev-Einträgen
+Summary(fr): 	Script pour créer et mettre à jour les entrées /dev
+Summary(pl): 	Skrypt do tworzenia i poprawiania urz±dzeñ z /dev 
+Summary(tr): 	Aygýt tanýmý yapmak ve deðiþtirmek için bir araç
 Name:        	MAKEDEV
 Version:     	2.6
 Release:     	1
@@ -16,27 +16,27 @@ BuildRoot:	/tmp/%{name}-%{version}-root
 %define		_bindir		/dev
 
 %description
-The /dev tree holds special files, each of which corresponds to a type
-of hardware device that Linux supports. This package contains a script
-which makes it easier to create and maintain the files which fill the
+The /dev tree holds special files, each of which corresponds to a type of
+hardware device that Linux supports. This package contains a script which
+makes it easier to create and maintain the files which fill the
 /dev tree.
 
 %description -l de
-Die /dev-Hierarchie enthält spezielle Dateien, von denen jede einem 
-Hardwaregerättyp entspricht, der von Linux unterstützt wird. Dieses 
-Paket enthält ein Skript, das die Erstellung und die Pflege der Dateien
-innerhalb dieser Hierarchie vereinfacht. 
+Die /dev-Hierarchie enthält spezielle Dateien, von denen jede einem
+Hardwaregerättyp entspricht, der von Linux unterstützt wird. Dieses Paket
+enthält ein Skript, das die Erstellung und die Pflege der Dateien innerhalb
+dieser Hierarchie vereinfacht.
 
 %description -l fr
-L'arborescence /dev contient des fichiers spéciaux. Chacun d'eux
-correspond à un périphérique matériel gérable par Linux. Ce paquetage
-contient un script facilitant la création et la maintenance des
-fichiers qui remplissent l'arborescence /dev.
+L'arborescence /dev contient des fichiers spéciaux. Chacun d'eux correspond
+à un périphérique matériel gérable par Linux. Ce paquetage contient un
+script facilitant la création et la maintenance des fichiers qui remplissent
+l'arborescence /dev.
 
 %description -l pl
 Pliki specjalne znajduj±ce siê w katalogu /dev odpowiadaj± urz±dzeniom,
-które s± obs³ugiwane przez Linuxa. Pakiet ten zawiera skrypt, który
-uczyni tworzenie i operowanie tymi plikami ³atwiejszym.
+które s± obs³ugiwane przez Linuxa. Pakiet ten zawiera skrypt, który uczyni
+tworzenie i operowanie tymi plikami ³atwiejszym.
 
 %description -l tr
 Unix ve Unix benzeri sistemler (Linux da dahil olmak üzere), makinaya baðlý
