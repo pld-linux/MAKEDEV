@@ -12,12 +12,8 @@ Group(pl):   	Narzêdzia/System
 Source:      	ftp://tsx-11.mit.edu/pub/linux/sources/sbin/%{name}-%{version}.tar.gz
 Requires:    	fileutils 
 Requires:	setup
-#Requires:	shadow-utils >= 970616-7
-#Prereq:      	shadow-utils
-# Note: pre-requires that particular version of shadow-utils, but
-# RPM can't handle that right now.
-BuildArch:   noarch
-BuildRoot:   /tmp/%{name}-%{version}-root
+BuildArch:	noarch
+BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
 The /dev tree holds special files, each of which corresponds to a type
