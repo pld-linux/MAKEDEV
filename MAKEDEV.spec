@@ -9,6 +9,7 @@ Release:	4
 License:	FRS - Freely Redistributable Software
 Group:		Applications/System
 Source0:	%{name}-%{version}.tar.gz
+# Source0-md5: f809a62a47ac46ad2b13354aa57c3ed0
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
