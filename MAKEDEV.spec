@@ -8,7 +8,7 @@ Summary(tr):	Aygýt tanýmý yapmak ve deðiþtirmek için bir araç
 Name:		MAKEDEV
 Version:	3.13
 Release:	1
-License:	FRS - Freely Redistributable Software
+License:	GPL v2+
 Group:		Applications/System
 Source0:	%{name}-%{version}-1.tar.gz
 # Source0-md5:	f8befaebd0813c6fa59c07ef3875f232
