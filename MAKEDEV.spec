@@ -11,7 +11,7 @@ Group:       	Utilities/System
 Group(pl):   	Narzêdzia/System
 Source:      	%{name}-%{version}.tar.gz
 BuildArch:	noarch
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_bindir		/dev
 
