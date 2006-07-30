@@ -68,7 +68,7 @@ olarak iþleyebilmesi için temel gereksinimlerdendir.
 %build
 %{__make} \
 	CC="%{__cc}" \
-	OPTFLAGS="%{rpmcflags}" \
+	OPTFLAGS="%{rpmcflags} %{rpmldflags}" \
 	SELINUX=1
 
 %install
