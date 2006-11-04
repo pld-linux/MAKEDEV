@@ -1,3 +1,7 @@
+#
+# Conditional build:
+%bcond_without	selinux		# build without SELinux support
+#
 Summary:	Program to make and update /dev entries
 Summary(de):	Script zum Erstellen und Aktualisieren von /dev-Einträgen
 Summary(es):	Script para hacer y actualizar entradas referentes a dispositivos en /dev
@@ -69,7 +73,7 @@ olarak iþleyebilmesi için temel gereksinimlerdendir.
 %{__make} \
 	CC="%{__cc}" \
 	OPTFLAGS="%{rpmcflags} %{rpmldflags}" \
-	SELINUX=1
+	%{?with_selinux:SELINUX=1}
 
 %install
 rm -rf $RPM_BUILD_ROOT
