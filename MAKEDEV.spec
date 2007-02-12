@@ -3,12 +3,12 @@
 %bcond_without	selinux		# build without SELinux support
 #
 Summary:	Program to make and update /dev entries
-Summary(de):	Script zum Erstellen und Aktualisieren von /dev-Einträgen
-Summary(es):	Script para hacer y actualizar entradas referentes a dispositivos en /dev
-Summary(fr):	Script pour créer et mettre à jour les entrées /dev
-Summary(pl):	Program do tworzenia i poprawiania urz±dzeñ z /dev
-Summary(pt_BR):	Script para fazer e atualizar entradas referentes a dispositivos em /dev
-Summary(tr):	Aygıt tanımı yapmak ve değiştirmek için bir araç
+Summary(de.UTF-8):   Script zum Erstellen und Aktualisieren von /dev-EintrÃ¤gen
+Summary(es.UTF-8):   Script para hacer y actualizar entradas referentes a dispositivos en /dev
+Summary(fr.UTF-8):   Script pour crÃ©er et mettre Ã  jour les entrÃ©es /dev
+Summary(pl.UTF-8):   Program do tworzenia i poprawiania urzÄ…dzeÅ„ z /dev
+Summary(pt_BR.UTF-8):   Script para fazer e atualizar entradas referentes a dispositivos em /dev
+Summary(tr.UTF-8):   AygÄ±t tanÄ±mÄ± yapmak ve deÄŸiÅŸtirmek iÃ§in bir araÃ§
 Name:		MAKEDEV
 Version:	3.13
 Release:	2
@@ -31,41 +31,41 @@ of hardware device that Linux supports. This package contains a
 program which makes it easier to create and maintain the files which
 fill the /dev tree.
 
-%description -l de
-Die /dev-Hierarchie enthält spezielle Dateien, von denen jede einem
-Hardwaregerättyp entspricht, der von Linux unterstützt wird. Dieses
-Paket enthält ein Skript, das die Erstellung und die Pflege der
+%description -l de.UTF-8
+Die /dev-Hierarchie enthÃ¤lt spezielle Dateien, von denen jede einem
+HardwaregerÃ¤ttyp entspricht, der von Linux unterstÃ¼tzt wird. Dieses
+Paket enthÃ¤lt ein Skript, das die Erstellung und die Pflege der
 Dateien innerhalb dieser Hierarchie vereinfacht.
 
-%description -l es
+%description -l es.UTF-8
 El directorio /dev posee archivos especiales, cada uno de ellos
 correspondiendo a un tipo de dispositivo de hardware que Linux
-soporta. Este paquete contiene un script que hace más fácil la
-creación y manutención de los archivos en el directorio /dev.
+soporta. Este paquete contiene un script que hace mÃ¡s fÃ¡cil la
+creaciÃ³n y manutenciÃ³n de los archivos en el directorio /dev.
 
-%description -l fr
-L'arborescence /dev contient des fichiers spéciaux. Chacun d'eux
-correspond à un périphérique matériel gérable par Linux. Ce paquetage
-contient un script facilitant la création et la maintenance des
+%description -l fr.UTF-8
+L'arborescence /dev contient des fichiers spÃ©ciaux. Chacun d'eux
+correspond Ã  un pÃ©riphÃ©rique matÃ©riel gÃ©rable par Linux. Ce paquetage
+contient un script facilitant la crÃ©ation et la maintenance des
 fichiers qui remplissent l'arborescence /dev.
 
-%description -l pl
-Pliki specjalne znajduj±ce siê w katalogu /dev odpowiadaj±
-urz±dzeniom, które s± obs³ugiwane przez Linuksa. Pakiet ten zawiera
-program, który uczyni tworzenie i operowanie tymi plikami ³atwiejszym.
+%description -l pl.UTF-8
+Pliki specjalne znajdujÄ…ce siÄ™ w katalogu /dev odpowiadajÄ…
+urzÄ…dzeniom, ktÃ³re sÄ… obsÅ‚ugiwane przez Linuksa. Pakiet ten zawiera
+program, ktÃ³ry uczyni tworzenie i operowanie tymi plikami Å‚atwiejszym.
 
-%description -l pt_BR
-O diretório /dev possui arquivos especiais, cada um deles
+%description -l pt_BR.UTF-8
+O diretÃ³rio /dev possui arquivos especiais, cada um deles
 correspondendo a um tipo de dispositivo de hardware que o Linux
-suporta. Este pacote contém um script que torna mais fácil a criação
-e manutenção dos arquivos no diretório /dev.
+suporta. Este pacote contÃ©m um script que torna mais fÃ¡cil a criaÃ§Ã£o
+e manutenÃ§Ã£o dos arquivos no diretÃ³rio /dev.
 
-%description -l tr
-Unix ve Unix benzeri sistemler (Linux da dahil olmak üzere), makinaya
-bağlı aygıtları göstermek için özel dosyalar kullanırlar. Bu özel
-dosyaların tümü /dev dizin yapısı altındadır. Bu paket en çok
-kullanılan /dev dosyalarını içerir. Bu dosyalar, bir sistemin düzgün
-olarak işleyebilmesi için temel gereksinimlerdendir.
+%description -l tr.UTF-8
+Unix ve Unix benzeri sistemler (Linux da dahil olmak Ã¼zere), makinaya
+baÄŸlÄ± aygÄ±tlarÄ± gÃ¶stermek iÃ§in Ã¶zel dosyalar kullanÄ±rlar. Bu Ã¶zel
+dosyalarÄ±n tÃ¼mÃ¼ /dev dizin yapÄ±sÄ± altÄ±ndadÄ±r. Bu paket en Ã§ok
+kullanÄ±lan /dev dosyalarÄ±nÄ± iÃ§erir. Bu dosyalar, bir sistemin dÃ¼zgÃ¼n
+olarak iÅŸleyebilmesi iÃ§in temel gereksinimlerdendir.
 
 %prep
 %setup -q
