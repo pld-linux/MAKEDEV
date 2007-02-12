@@ -3,12 +3,12 @@
 %bcond_without	selinux		# build without SELinux support
 #
 Summary:	Program to make and update /dev entries
-Summary(de.UTF-8):   Script zum Erstellen und Aktualisieren von /dev-Einträgen
-Summary(es.UTF-8):   Script para hacer y actualizar entradas referentes a dispositivos en /dev
-Summary(fr.UTF-8):   Script pour créer et mettre à jour les entrées /dev
-Summary(pl.UTF-8):   Program do tworzenia i poprawiania urządzeń z /dev
-Summary(pt_BR.UTF-8):   Script para fazer e atualizar entradas referentes a dispositivos em /dev
-Summary(tr.UTF-8):   Aygıt tanımı yapmak ve değiştirmek için bir araç
+Summary(de.UTF-8):	Script zum Erstellen und Aktualisieren von /dev-Einträgen
+Summary(es.UTF-8):	Script para hacer y actualizar entradas referentes a dispositivos en /dev
+Summary(fr.UTF-8):	Script pour créer et mettre à jour les entrées /dev
+Summary(pl.UTF-8):	Program do tworzenia i poprawiania urządzeń z /dev
+Summary(pt_BR.UTF-8):	Script para fazer e atualizar entradas referentes a dispositivos em /dev
+Summary(tr.UTF-8):	Aygıt tanımı yapmak ve değiştirmek için bir araç
 Name:		MAKEDEV
 Version:	3.13
 Release:	2
