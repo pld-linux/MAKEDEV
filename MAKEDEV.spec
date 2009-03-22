@@ -10,12 +10,12 @@ Summary(pl.UTF-8):	Program do tworzenia i poprawiania urządzeń z /dev
 Summary(pt_BR.UTF-8):	Script para fazer e atualizar entradas referentes a dispositivos em /dev
 Summary(tr.UTF-8):	Aygıt tanımı yapmak ve değiştirmek için bir araç
 Name:		MAKEDEV
-Version:	3.13
-Release:	3
+Version:	3.24
+Release:	1
 License:	GPL v2+
 Group:		Applications/System
-Source0:	%{name}-%{version}-1.tar.gz
-# Source0-md5:	f8befaebd0813c6fa59c07ef3875f232
+Source0:	ftp://distfiles.pld-linux.org/src/%{name}-%{version}-1.tar.gz
+# Source0-md5:	38546d1306ead17afbc34f60c06fcb20
 Patch0:		%{name}-ub.patch
 %if %{with selinux}
 BuildRequires:	libselinux-devel >= 0:1.8
