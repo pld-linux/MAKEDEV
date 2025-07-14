@@ -69,7 +69,7 @@ olarak işleyebilmesi için temel gereksinimlerdendir.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %{__make} \
