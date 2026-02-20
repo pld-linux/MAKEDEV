@@ -11,7 +11,7 @@ Summary(pt_BR.UTF-8):	Script para fazer e atualizar entradas referentes a dispos
 Summary(tr.UTF-8):	Aygıt tanımı yapmak ve değiştirmek için bir araç
 Name:		MAKEDEV
 Version:	3.24
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Applications/System
 Source0:	ftp://distfiles.pld-linux.org/src/%{name}-%{version}-1.tar.gz
